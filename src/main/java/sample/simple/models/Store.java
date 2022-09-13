@@ -43,11 +43,13 @@ public class Store implements IFastLane, IJustHaveALook, ILane, IStore {
 
     @Override
     public Boolean addItemToCart(Long articleId, Long clientId) {
-        return null;
+        System.out.println("Item: " + articleId + " added to client " + clientId + " cart");
+        return Boolean.TRUE;
     }
 
     @Override
     public Boolean pay(Long clientId) {
-        return null;
+        System.out.println("Client " + clientId + " paid for his cart");
+        return Boolean.TRUE;
     }
 }

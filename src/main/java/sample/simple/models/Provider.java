@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 import sample.simple.interfaces.IProvider;
 
 import java.util.List;
+import java.util.Random;
 
 @Getter
 @Setter
@@ -20,11 +21,13 @@ public class Provider implements IProvider {
 
     @Override
     public Double getPrice(Long id) {
-        return null;
+        Random random = new Random();
+        return random.nextDouble();
     }
 
     @Override
     public Boolean order(Long productId, Long storeId, Integer quantity) {
-        return null;
+        System.out.println("Store " + storeId + " ordered " + quantity + " of product " + productId);
+        return Boolean.TRUE;
     }
 }
