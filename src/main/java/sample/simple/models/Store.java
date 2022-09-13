@@ -9,6 +9,7 @@ import sample.simple.interfaces.IJustHaveALook;
 import sample.simple.interfaces.ILane;
 import sample.simple.interfaces.IStore;
 
+import java.util.Map;
 import java.util.Random;
 
 @Getter
@@ -19,6 +20,8 @@ public class Store implements IFastLane, IJustHaveALook, ILane, IStore {
     private Long id;
     private Address address;
     private String name;
+    private Long bankAccountAddress;
+    private Map<Long, Integer> stock;
 
     @Override
     public Boolean oneShotOrder(Long articleId, Long clientId, Integer quantity) {
