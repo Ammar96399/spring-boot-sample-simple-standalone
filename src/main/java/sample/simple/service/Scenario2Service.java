@@ -1,6 +1,7 @@
 package sample.simple.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import sample.simple.models.Bank;
 import sample.simple.models.Client;
 import sample.simple.models.Provider;
@@ -8,6 +9,7 @@ import sample.simple.models.Store;
 
 import java.util.List;
 
+@Component
 public class Scenario2Service {
 
     @Autowired
